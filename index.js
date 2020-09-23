@@ -15,9 +15,7 @@ function logRequests(request, response, next) {
   const logLabel = `[${method.toUpperCase()}]${url}`;
   console.log(logLabel);
 
-  next();
-
-  console.timeEnd();
+  return next();
 }
 
 function validateProjectId(request, response, next) {
